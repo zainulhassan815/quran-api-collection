@@ -1,0 +1,33 @@
+meta {
+  name: Get Random Aayah
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/content/api/v4/verses/random?fields=text_uthmani
+  body: none
+  auth: none
+}
+
+params:query {
+  fields: text_uthmani
+  ~words: true
+  ~manzil_number: 
+  ~chapter_number: 
+  ~page_number: 
+  ~juzz_number: 
+  ~hizb_number: 
+  ~rub_el_hizb_number: 
+  ~ruku_number: 
+  ~language: 
+  ~translations: 
+  ~audio: 
+  ~tafsirs: 
+  ~word_fields: 
+  ~translation_fields: 
+}
+
+settings {
+  encodeUrl: true
+}

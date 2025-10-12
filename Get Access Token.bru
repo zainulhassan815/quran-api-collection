@@ -1,0 +1,38 @@
+meta {
+  name: Get Access Token
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{auth_url}}/oauth2/token
+  body: formUrlEncoded
+  auth: basic
+}
+
+headers {
+  Content-Type: application/x-www-form-urlencoded
+}
+
+auth:basic {
+  username: {{client_id}}
+  password: {{client_secret}}
+}
+
+body:text {
+  grant_type=client_credentials&scope=content
+}
+
+body:form-urlencoded {
+  grant_type: client_credentials
+  scope: content
+}
+
+script:post-response {
+  const token = res.getBody().access_token;
+  bru.setEnvVar("token", token);
+}
+
+settings {
+  encodeUrl: true
+}
