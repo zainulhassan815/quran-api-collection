@@ -5,13 +5,16 @@ meta {
 }
 
 get {
-  url: {{base_url}}/content/api/v4/verses/random?fields=text_uthmani
+  url: {{base_url}}/content/api/v4/verses/random?fields=text_uthmani&translations=158&audio=3&translation_fields=chapter_id
   body: none
   auth: none
 }
 
 params:query {
   fields: text_uthmani
+  translations: 158
+  audio: 3
+  translation_fields: chapter_id
   ~words: true
   ~manzil_number: 
   ~chapter_number: 
@@ -21,11 +24,8 @@ params:query {
   ~rub_el_hizb_number: 
   ~ruku_number: 
   ~language: 
-  ~translations: 
-  ~audio: 
   ~tafsirs: 
   ~word_fields: 
-  ~translation_fields: 
 }
 
 settings {

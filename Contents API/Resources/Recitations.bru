@@ -1,0 +1,19 @@
+meta {
+  name: Recitations
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/content/api/v4/resources/recitations
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~language: 
+}
+
+settings {
+  encodeUrl: true
+}

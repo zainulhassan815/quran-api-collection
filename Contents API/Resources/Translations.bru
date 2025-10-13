@@ -1,0 +1,19 @@
+meta {
+  name: Translations
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/content/api/v4/resources/translations
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~language: en
+}
+
+settings {
+  encodeUrl: true
+}
